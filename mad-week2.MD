@@ -182,3 +182,8 @@ const styles = StyleSheet.create({
   }
 });
 ```
+
+# Opdracht:
+
+1. Maak een app met twee knoppen en een tekstveld dat een getal laat zien. Het getal is in eerste instantie 0. Een knop telt 1 op bij het getal. De tweede knop trekt 1 af van het getal. 
+2. **Inleveren**: maak een screenshot van Android Studio waarbij je je code ziet en je app ziet draaien in de simulator.
