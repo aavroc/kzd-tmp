@@ -1,6 +1,8 @@
 # Keuzedeel - Mobile Application Development (K0497)
 # Week 4
 
+## Items toevoegen aan FlatList vanuit text input
+
 ```javascript
 import React from 'react';
 import { FlatList, StyleSheet, Text, View, TextInput, Button } from 'react-native';
@@ -58,4 +60,5 @@ const styles = StyleSheet.create({
 export default FlatListBasics;
 ```
 
-
+### Opdracht: 
+Maak een rekenmachine met vier buttons (+,-, *, /), een text input en een text out element / component.
