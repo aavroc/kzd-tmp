@@ -1,94 +1,8 @@
-# Camera
+# Aanspreken van de camera
 
-# Rekenmachine
+Voor het aanspreken van de camera gebruiken we een library: react-native-image-picker.
 
-```javascript
-import React, {useState, useCallback} from 'react';
-import {FlatList, StyleSheet, Text, Button, View, TextInput, Image, Alert, TouchableOpacity} from 'react-native';
-
-const App = () => {
-    const [input, updateInput] = useState(0);
-    const [result, updateResult] = useState("");
-
-    const addAction = (action) => {
-        let newString = input + action;
-        // console.log(newString);
-        updateInput(newString);
-    }
-
-    const evaluate = () => {
-        console.log(input);
-        console.log(eval(input))
-        updateResult(eval(input))
-    }
-
-    return(
-        <View>
-            <Text>{result}</Text>
-            <TextInput
-                style={styles.input}
-                onChangeText={updateInput}
-                keyboardType = "numeric"
-                value={input}
-            />
-            <View style={styles.buttonsview}>
-                <TouchableOpacity onPress={() => addAction("+")} style={styles.button}>
-                    <Text style={styles.tekst}>+</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity onPress={() => addAction("-")} style={styles.button}>
-                    <Text style={styles.tekst}>-</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity onPress={() => addAction("*")} style={styles.button}>
-                    <Text style={styles.tekst}>*</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity onPress={() => addAction("/")} style={styles.button}>
-                    <Text style={styles.tekst}>/</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity onPress={() => evaluate()} style={styles.button}>
-                    <Text style={styles.tekst}>=</Text>
-                </TouchableOpacity>
-            </View>
-        </View>
-    )
-}
-
-const styles = StyleSheet.create({
-    container:{
-        width: '50%',
-    },
-    buttonsview:{
-        flex: 1,
-        flexDirection: "row",
-    },
-    input:{
-        fontSize: 22,
-        color: "#000"
-    },
-    button: {
-        alignItems: "center",
-        backgroundColor: "#dddd",
-        padding: 10,
-        margin: 5,
-        width: 50,
-        height: 50,
-        color: "#000",
-        elevation: 2,
-    },
-    tekst: {
-        fontSize: 20,
-        color: '#000',
-    }
-
-});
-
-export default App;
-```
-
-
+Installeer react-native-image-picker door onderstaande command uit te voeren in een terminal. Letop dat je in de root map van je project staat als je dit doet.
 
 ```cli
 npm install react-native-image-picker
@@ -141,7 +55,13 @@ const styles = StyleSheet.create({
 });
 
 
-
 export default App;
-
 ```
+
+# OPDRACHT:
+
+1. Zorg dat je de bovenstaande code werkend hebt. 
+
+# INLEVEREN BIJ DEZE OPDRACHT:
+
+1. Een screenshot van de app werkend in de android simulator op het moment dat je een foto hebt genomen en deze getoond wordt.
